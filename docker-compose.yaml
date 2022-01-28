@@ -7,7 +7,7 @@ services:
     hostname: app
     restart: unless-stopped
     ports:
-      - "8090:80"
+      - "8099:80"
     networks:
       - internal
     volumes:
