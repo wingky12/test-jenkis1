@@ -1,0 +1,20 @@
+version: '3.7'
+
+services:
+  app:
+    image: wingky/php8.1
+    container_name: app-1
+    hostname: app
+    restart: unless-stopped
+    ports:
+      - "8090:80"
+    networks:
+      - internal
+    volumes:
+      - app_test:/var/www/html/public/data
+    
+volumes:
+  app_test:
+
+networks:
+  internal:
